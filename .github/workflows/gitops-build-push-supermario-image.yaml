@@ -36,7 +36,7 @@ on:
       - master
  
 env:
-  VERSION: $(( $(cat version.txt) + 1 ))     ##### Dynamic Tag  (Note : Why +1 here, we already build one image eariler with static tag)
+  VERSION: $(( $(cat version.txt) + 2 ))     ##### Dynamic Tag  (Note : Why +1 here, we already build one image eariler with static tag)
   
 jobs:
   
