@@ -49,6 +49,6 @@ jobs:
  
       - name: Build and Push Docker Image
         run: |
-          docker build -t docker.io/pkcloud/supermariogitopsproject:${{ env.VERSION }}
+          docker build -t docker.io/pkcloud/supermariogitopsproject:${{ env.VERSION }} .
           docker push docker.io/pkcloud/supermariogitopsproject:${{ env.VERSION }}
 
