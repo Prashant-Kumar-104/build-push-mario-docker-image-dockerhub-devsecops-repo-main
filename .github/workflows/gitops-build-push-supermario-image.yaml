@@ -51,6 +51,8 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
  
       - name: Build and Push Docker Image
+        env:
+          TAG: ${{ github.run_number }}
         run: |
           docker build -t docker.io/pkcloud/supermariogitopsproject:${TAG} .
           docker push docker.io/pkcloud/supermariogitopsproject:${TAG}
